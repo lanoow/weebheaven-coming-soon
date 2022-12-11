@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap');
 
 body {
 	display: border-box;
@@ -9,7 +10,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	cursor: url(./images/cursor.webp) 24 24, auto;
+	user-select: none;
 }
 
 nav {
@@ -26,8 +27,6 @@ nav a {
 	text-decoration: none;
 
 	padding: 0.5em 1em;
-	
-	cursor: none;
 	transition: ease-in-out 200ms;
 }
 
@@ -62,25 +61,26 @@ nav > div > a {
 }
 
 .content h1 {
+	font-family: 'Righteous', 'Fira Sans', sans-serif;
 	font-size: 5em;
 	font-weight: 900;
-	color: #ffffff;
 	text-align: center;
 	
-	background: rgb(255,203,45);
 	background: linear-gradient(to right,
 		rgba(255,203,45,1) 20%,
 		rgba(255,115,0,1) 40%,
 		rgba(255,115,0,1) 60%,
 		rgba(255,203,45,1) 80%);
 	background-size: 200% auto;
-	
-	background-clip: text;
-	text-fill-color: transparent;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	
+	background-clip: text; -webkit-background-clip: text;
+
+	color: #121212;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	-webkit-text-stroke: 5px transparent;
+
 	animation: shine 1250ms linear infinite;
+	pointer-events: none;
 }
 
 @keyframes shine {
@@ -96,7 +96,6 @@ nav > div > a {
 }
 
 .content a {
-	cursor: none;
 	font-size: 1.3em;
 	font-weight: bold;
 	color: #fff;
@@ -109,7 +108,6 @@ nav > div > a {
 	border: 1px solid #fff;
 	border-radius: 8px;
 	background-color: transparent;
-	
 	transition: ease-in-out 200ms;
 }
 
